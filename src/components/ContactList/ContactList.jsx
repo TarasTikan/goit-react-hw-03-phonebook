@@ -2,8 +2,8 @@ import React from 'react';
 import { ContactBtn, ContactItem } from './ContactList.styled';
 import PropTypes from 'prop-types';
 
-export const ContactList = ({ contacts, deleteContact }) => (
-  <ul>
+export const ContactList = ({ contacts, deleteContact }) => {
+  return (<ul>
     {contacts.map(({ id, name, number }) => (
       <ContactItem key={id}>
         <p>
@@ -14,8 +14,8 @@ export const ContactList = ({ contacts, deleteContact }) => (
         </ContactBtn>
       </ContactItem>
     ))}
-  </ul>
-);
+  </ul>)
+};
 
 ContactList.propTypes = {
   deleteContact: PropTypes.func.isRequired,
