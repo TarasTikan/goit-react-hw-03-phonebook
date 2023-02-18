@@ -53,6 +53,7 @@ export class App extends Component {
   };
 
   render() {
+    console.log(this.state.contacts)
     const normalizedFiltr = this.state.filter.toLocaleLowerCase();
     const filterName = this.state.contacts.filter(contact =>
       contact.name.includes(normalizedFiltr)
